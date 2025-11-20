@@ -1,0 +1,64 @@
+{% extends "educationalapplication/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+  <h1 class="mb-4">Admin Page</h1>
+
+  <!-- Parent Registration Table -->
+  <h2 class="mb-3">Parent Registration Info</h2>
+  <table class="table table-bordered table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Student Name</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in d %}
+      <tr>
+        <td>{{ i.rname }}</td>
+        <td>{{ i.rphone }}</td>
+        <td>{{ i.remail }}</td>
+        <td>{{ i.rstudentname }}</td>
+        <td>{{ i.rmessage }}</td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="5" class="text-center text-muted">No parent registrations found.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <!-- Contact Us Table -->
+  <h2 class="mb-3 mt-5">Contact Us Info</h2>
+  <table class="table table-bordered table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for j in d1 %}
+      <tr>
+        <td>{{ j.cname }}</td>
+        <td>{{ j.cphone }}</td>
+        <td>{{ j.cemail }}</td>
+        <td>{{ j.cmessage }}</td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="4" class="text-center text-muted">No contact submissions found.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends "educationalapplication/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Welcome to Class VIII</h1>
+
+  <!-- Top Section: Text + Video -->
+  <div class="row align-items-stretch equal-section">
+    <!-- Left Side Paragraph -->  
+    <div class="col-md-6 d-flex">
+      <div class="text-box p-3 rounded flex-fill">
+        <p style="font-size: 18px; text-align: justify;">
+         Welcome to Class VIII learning hub! Here you’ll find comprehensive tutorials, notes, and recorded sessions designed to help you strengthen your foundation in all core subjects. Our video lessons are interactive and aim to build a deeper understanding of key concepts while enhancing analytical thinking and problem-solving abilities.
+
+        </p>
+      </div>
+    </div>
+
+    <!-- Right Side Video -->
+    <div class="col-md-6 d-flex">
+      <iframe width="100%" height="315"
+        src="https://www.youtube.com/embed/q-xS25lsN3I" title="What is Node.js and how it works (explained in 2 minutes)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        title="Class X Intro Video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Bottom Section -->
+  <!-- Bottom Section -->
+<div class="mt-5 text-center">
+  <h2 class="mb-4">Class VIII Video Lessons</h2>
+  <div class="row">
+    {% for video in videos %}
+    {% endfor %}
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="ratio ratio-16x9">
+        <iframe  src="https://www.youtube.com/embed/xND0t1pr3KY" title="C Programming Full Course for free ⚙️ (2025)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="ratio ratio-16x9">
+        <iframe  src="https://www.youtube.com/embed/E2DEHOEbzks" title="Model Context Protocol (MCP) Explained for Beginners: AI Flight Booking Demo!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="ratio ratio-16x9">
+        <iframe  src="https://www.youtube.com/embed/bHZup_marhk" title="AWS Outage Explained with root cause in simple words" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="ratio ratio-16x9">
+        <iframe  src="https://www.youtube.com/embed/gLptmcuCx6Q" title="What is CI/CD Pipeline? | Simply Explained by Shradha Ma&#39;am" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/YMAwgRwjEOQ" title="5 Design Patterns That Are ACTUALLY Used By Developers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="ratio ratio-16x9">
+        <iframe  src="https://www.youtube.com/embed/GcVtElYa17s" title="API Authentication EXPLAINED! 🔐 OAuth vs JWT vs API Keys 🚀" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="ratio ratio-16x9">
+        <iframe  src="https://www.youtube.com/embed/tNrNLoCqzco" title="Fastest way to learn Data Structures and Algorithms" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="ratio ratio-16x9">
+        <iframe  src="https://www.youtube.com/embed/l3X1t3kpmwY" title="How I Mastered System Design Interviews" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<center class="tp">
+  <h2 >Still Hunting for a Job?</h2>
+  <p >
+    ELearn Infotech is a Realtime Training Company offering Courses on varied IT Technologies like Fullstack Development, Python, React JS, Node JS, Web Design & PHP with MySQL, Digital Marketing
+  </p>
+  <a href="http://127.0.0.1:8000/parentreg/"><button>Register</button></a>
+</center>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "educationalapplication/base.html" %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="container mt-5" style="display: flex; justify-content: center; gap: 50px; flex-wrap: wrap;">
+
+    <!-- Address Section -->
+    <div style="background-color: skyblue; padding: 20px; border-radius: 10px; width: 300px; text-align: left;">
+        <h2>Contact Info</h2>
+        <p><strong>Address:</strong> 3 Times Sq Room 413, New York, NY 10036</p>
+        <p><strong>Phone:</strong> +1 213-213-5475</p>
+        <p><strong>Email:</strong> edu@gmail.com</p>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div style="background-color: lightblue; padding: 20px; border-radius: 10px; width: 400px;">
+        <h2>Send a Message</h2>
+        <form method="POST" action="">
+            {% csrf_token %}
+            {{ f.as_p }}
+            <button type="submit" class="btn btn-primary mt-3 w-100">Submit</button>
+        </form>
+    </div>
+    <div style="width: 100%; text-align: center;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d11065.597304307263!2d-73.99587453046787!3d40.75799856359577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1seducational%20insistution%20in%20newyork!5e1!3m2!1sen!2sus!4v1763442861384!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+</div>
+{% endblock %}

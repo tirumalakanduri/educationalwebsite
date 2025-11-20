@@ -1,0 +1,162 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Educational Website</title>
+
+  <!-- Bootstrap CSS -->
+<!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+  
+  
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container-fluid">
+
+      <!-- Logo on Left -->
+      <a class="navbar-brand" href="#">
+        <img src="{% static 'images/logo.jpg' %}" alt="Logo" width="50" height="50">
+      </a>
+
+      <!-- Toggle button for mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Centered Menu -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/home/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/about/">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="classesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Classes
+            </a> 
+            <ul class="dropdown-menu" aria-labelledby="classesDropdown">
+              <li><a class="dropdown-item" href="http://127.0.0.1:8000/classviii/">Class VIII</a></li>
+              <li><a class="dropdown-item" href="http://127.0.0.1:8000/classix/">Class IX</a></li>
+              <li><a class="dropdown-item" href="http://127.0.0.1:8000/classx/">Class X</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="galleryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Gallery
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="galleryDropdown">
+              <li><a class="dropdown-item" href="http://127.0.0.1:8000/photos/">Photos</a></li>
+              <li><a class="dropdown-item" href="http://127.0.0.1:8000/vedios/">Videos</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/parentreg/">Parent Reg</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/latestnews/">LATEST NEWS </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/contactus/">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+ 
+ 
+
+ 
+
+  <!-- Page Content -->
+  <div class="container text-center mt-5" >
+    <img src="{% static 'images/homepage-image.jpg' %}" class="homepage-img" alt="Home Image">      
+    {% block mar %}
+    <!-- Marquee Bar -->
+    <div style="background-color: #007bff; color: white; padding: 10px; border-radius: 5px; margin-top: 15px; margin-bottom: 15px;">
+      <marquee behavior="scroll" direction="left" scrollamount="6">
+        🎓 Admissions are Open for 2025 — Enroll Now to Learn HTML, CSS, JavaScript, Python, Java, React.js, and More! 🚀
+      </marquee>
+    </div>
+    {% endblock %}
+    {% block content %}
+    <h1>Welcome to My Educational Website</h1>
+    <p>At SkillUp Academy, we are on a mission to make technology education fun, simple, and accessible for every student. Our platform is specially designed for 8th, 9th, and 10th grade students who are curious about the digital world and eager to learn how websites, apps, and games are built.</p>
+    <p>Here, learning goes beyond textbooks! We teach essential web development and programming skills like HTML, CSS, and JavaScript, helping students understand how to bring their creative ideas to life on the web. But that’s just the beginning — as students grow, they’ll also get hands-on exposure to advanced and exciting topics like Python programming, C language, Java, Bootstrap, React.js, Node.js, and basic database concepts (SQL)</p>
+  </div>
+
+  <div class="why-choose-section text-center mt-5">
+  <h1>Why Choose us?</h1>
+
+  <div class="fi-container">
+    <div class="fi">
+      <img src="{% static 'images/jenkins-image.png' %}" class="di" alt="Jenkins">
+      <h3>Jenkins</h3>
+      <p>Jenkins training teaches you to use the open-source automation server to streamline the software development lifecycle through building, testing, and deployment.</p>
+      <a href="http://127.0.0.1:8000/parentreg/"><button>Register</button></a>
+    </div>
+
+    <div class="fi">
+      <img src="{% static 'images/java-image.png' %}" class="di" alt="Java">
+      <h3>Java</h3>
+      <p>Java is a high-level, class-based, object-oriented programming language designed to have as few implementation dependencies as possible.</p>
+      <a href="http://127.0.0.1:8000/parentreg/"><button>Register</button></a>
+    </div>
+
+    <div class="fi">
+      <img src="{% static 'images/Python-image.png' %}" class="di" alt="Python">
+      <h3>Python</h3>
+      <p>Python is a high-level, interpreted language recognized for its emphasis on readability and ease of use.</p>
+      <a href="http://127.0.0.1:8000/parentreg/"><button>Register</button></a>
+    </div>
+
+    <div class="fi">
+      <img src="{% static 'images/Reactjs-image.png' %}" class="di" alt="ReactJs">
+      <h3>ReactJs</h3>
+      <p>React.js is an open-source JavaScript library for building modern user interfaces.</p>
+      <a href="http://127.0.0.1:8000/parentreg/"><button>Register</button></a>
+    </div>
+  </div>
+</div>
+
+
+
+
+    
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<center class="tp">
+  <h2 >Still Hunting for a Job?</h2>
+  <p >
+    ELearn Infotech is a Realtime Training Company offering Courses on varied IT Technologies like Fullstack Development, Python, React JS, Node JS, Web Design & PHP with MySQL, Digital Marketing
+  </p>
+  <a href="http://127.0.0.1:8000/parentreg/"><button>Register</button></a>
+</center>
+
+
+</body>
+
+<center><h1>Parent Feedbacks</h1></center>
+
+<center>
+  <iframe width="200" height="200" src="https://www.youtube.com/embed/f2qGQIVNfMg" title="What Do Parents Say | Online School Parents Reviews | Parents Testimonial #parenttestimonial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="200" height="200" src="https://www.youtube.com/embed/k4g_jPe4lH0" title="Parents Feedback || Review for our school || Lecole Tejal School Review" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="200" height="200" src="https://www.youtube.com/embed/d2yHf4T2Vys" title="Parent&#39;s feedback on Scaler School of Technology #scalerschooloftechnology #computerscience" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="200" height="200" src="https://www.youtube.com/embed/zv7voEWaku0" title="PARENTS FEEDBACK  ABOUT OUR SCHOOL -  Parent of our student Ezhilmathi V.k VII TM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+{% endblock %}
+</html>

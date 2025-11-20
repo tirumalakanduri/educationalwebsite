@@ -1,0 +1,118 @@
+/* Homepage image only */
+.homepage-img {
+    width: 100%;         /* full width of container */
+    max-width: 1200px;   /* limits the image width */
+    height: 300px;       /* fixed height */
+    object-fit: cover;   /* keeps aspect ratio without distortion */
+    margin: 0 auto;      /* center the image */
+    display: block;
+}
+
+/* Navbar logo */
+.navbar-brand img {
+    width: 50px;   /* small logo size */
+    height: 50px;
+}
+
+
+/* Force navbar background color */
+.custom-navbar {
+  background-color: #6eb5e4 !important;  /* blue */
+}
+
+/* Make text white */
+.custom-navbar .nav-link {
+  color: rgb(221, 30, 30) !important;
+}
+
+/* On hover */
+.custom-navbar .nav-link:hover {
+  color: yellow !important;
+}
+
+/* Brand logo text (if any) */
+.custom-navbar .navbar-brand {
+  color: rgb(214, 20, 20) !important;
+}
+
+
+
+/* Heading color */
+h1 {
+  color: blue !important;
+  font-family: arial;
+}
+img{
+  height: 100%;
+  width: 100%;
+}
+
+.tp{
+  background-color:rgb(75, 75, 233);
+  padding:10px;
+  border-radius: 5px;
+}
+
+.fi-container {
+  display: flex;
+  flex-wrap: nowrap;          /* keeps all in one row */
+  justify-content: center;    /* centers the entire row */
+  align-items: stretch;
+  overflow-x: auto;           /* scrolls sideways if needed */
+  gap: 20px;                  /* space between cards */
+  padding: 10px;
+}
+
+.fi {
+  flex: 0 0 260px;            /* fixed width for each card */
+  background-color: rgb(214, 203, 203);
+  color: rgb(9, 8, 8);
+  font-size: 14px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.fi:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+.di{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px
+}
+
+h2{
+  color: rgb(14, 14, 14);
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+
+
+
+.text-box {
+  background-color: #e6f2ff; /* Light blue */
+  border-left: 5px solid #3399ff;
+  border-radius: 8px;
+  padding: 20px;
+  height: 100%; /* Makes it stretch equally with video */
+  display: flex;
+  align-items: center; /* Vertically center text */
+}
+
+.equal-section iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 315px; /* Ensures video doesn’t collapse */
+  border-radius: 8px;
+}
+
